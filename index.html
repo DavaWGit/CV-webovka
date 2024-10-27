@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="utf-8">
+    <title>MyResume</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- stylesheets -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+
+    <!-- Nav bar -->
+    <div class="navbar-bg">
+        <div class="navbar">
+            <a href="#info">
+                <p>Info</p>
+            </a>
+            <a href="#education">
+                <p>Studium</p>
+            </a>
+            <a href="#skills">
+                <p>Schopnosti</p>
+            </a>
+            <a href="#contacts">
+                <p>Kontakt</p>
+            </a>
+        </div>
+    </div>
+
+    <div id="hamburger" onclick="toggleMenu(this)">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="mobile_navbar">
+            <a href="#info"><i class="fa-solid fa-info"></i></a>
+            <a href="#education"><i class="fa-solid fa-school"></i></a>
+            <a href="#skills"><i class="fa-solid fa-glasses"></i></a>
+            <a href="#contacts"><i class="fa-solid fa-phone"></i></a>
+        </div>
+    </div>
+
+    <!-- Header of the page -->
+    <header class="center">
+        <div>
+            <h1><a href="https://www.stud.fit.vutbr.cz/~xzahal03" target="_blank">David Zahálka</a></h1>
+
+            <p>Student třetího ročníku bakalářského studia na Fakultě Informačních Technologii, VUT v Brně</p>
+
+            <a href="#info" id="arrow"><i class="fa-solid fa-arrow-down"></i></a>
+        </div>
+    </header>
+    <!-- Basic info -->
+    <section class="baseSection" id="info">
+        <h2>Info</h2>
+        <p> Jmenuji se David Zahálka, jsem student informatiky na VUT. <br>
+            Kromě školy a programování mezi mé koníčky patří například posilovna, sledování anime, čtení mangy a hraní
+            videoher. <br>
+            Pří práci se snažím být optimistický a když mi na něčem hodně záleží, jsem schopen tomu věnovat většinu
+            času, abych dosáhl uspokojivých výsledků.
+        </p>
+    </section>
+
+    <!-- Studies -->
+    <section class="baseSection" id="education">
+        <h2>Studium</h2>
+        <p> Byl jsem studentem na celkem třech školách.</p>
+
+        <div class="schools">
+            <div id="middleSchool">
+                <h2><a>Základní škola</a></h2>
+                <img src="img/slovacka.jpg" alt="slovacka">
+                <p> Svův studjiní život jsem začal na Základní škole Slovácká v Břeclavi. <br>
+                    Na druhý stupeň jsem chodil do jazykové třídy, která se intenzivněji zaměřovala na studium cizých
+                    jazyků jako angličtina a němčina.
+                </p>
+            </div>
+
+            <div id="highSchool">
+                <h2><a>Střední škola</a></h2>
+                <img src="img/gympl.jpeg" alt="gympl">
+                <p> Na střední jsem se rozhodl jít na Gymnázium Břeclav, jelikož jsem ještě nebyl uplně rozhodlí co chci
+                    v životě dělat a gympl mi přišel jako celkem dobrá příprava na vysokou školu,
+                    kterou jsem chtěl v budoucnu navštěvovat, a zároveň mi pomohl zjistit, čemu se chci věnovat v
+                    budoucnu. Zároveň byla na našem gymplu možnost složit státní jazykovou zkoušku, tuto možnost jsem
+                    využil a díky tomu mám
+                    certifikát C1 v angličtině. </p>
+            </div>
+
+            <div id="university">
+                <h2><a>Vysoká škola</a></h2>
+                <img src="img/vut.jpg" alt="vut">
+                <p> Po gymplu jsem se rozhodoval mezi jazykovou školou a informatikou, jelikož programování a cizí
+                    jazyky jsou dvě věci, které mi jdou a baví mě. Nakonec jsem se rozhodl pro informatiku. Příhlášku
+                    jsem si podal na VUT FIT, jelikož mi to přišlo jako
+                    nejlepší volba ze všech informatických škol v Brně, hlavně díky prestiži a také díky tomu, že na
+                    tuto školu šlo hodně mých spolužáků.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="baseSection" id="skills">
+        <h2>Schopnosti</h2>
+        <p> Za studium na FITu jsem se setkal z hodně programovacími jazyky,
+            z většiny z nich jsem se rozhodl udělat tuhle tabulku, ve které jsem je seřadil podle toho,
+            jak moc si jsem jistý svými schopnostmi v daném jazyce.
+        </p>
+        <!-- temp flex table -->
+        <div id="test">
+            <div id="line">
+                <p>Confident</p>
+                <div class="tablediv">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="">
+                </div>
+            </div>
+
+            <div>
+                <p>Decent</p>
+                <div class="tablediv">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="">
+                    <i class="devicon-latex-original"></i>
+                    <i class="devicon-unity-original"></i>
+                </div>
+            </div>
+
+            <div>
+                <p>Know the Basics</p>
+                <div class="tablediv" id="lastcell">
+                    <div>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="">
+                    </div>
+                    <div>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact information -->
+    <section class="baseSection" id="contacts">
+        <div>
+            <h2>Kontakt</h2>
+
+            <div id="links">
+                <span id="mail"><i class="fas fa-envelope-square"></i><a href="mailto:Dejv.zahalka@gmail.com">Dejv.zahalka@gmail.com</a></span>
+                <span id="fitmail"><img src="img/FIT.png" alt="FIT"><a href="mailto:xzahal03@stud.fit.vutbr.cz">xzahal03@stud.fit.vutbr.cz</a></span>
+                <span id="phone"><i class="fas fa-phone-square-alt"></i><a>+999 864 354 543</a></span>
+                <span id="twitter"><i class="fa-brands fa-twitter"></i><a>@DavaZahalka</a></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p> © David Zahálka </p>
+
+    </footer>
+
+    <!-- js scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

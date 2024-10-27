@@ -1,0 +1,503 @@
+/* obecne vlastnosti pro vetsinu stranky */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #0f1519;
+    color: white;
+}
+
+p {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+/* --------------------------------- */
+
+/* hlavicka (uvodni stranka) */
+header::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../img/png_2.png") no-repeat;
+    background-size: contain;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+header {
+    height: 100vh;
+    margin: auto;
+    width: 100vh;
+    border-bottom: #252c32 2px solid;
+}
+
+.center {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+header h1, header p {
+    text-align: center;
+}
+
+header h1 a {
+    font-size: 60px;
+    font-family: 'Colfax', Helvetica, sans-serif;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(0, 200, 200), 0 0 0.2em rgb(0, 200, 200);
+    text-decoration: none;
+    color: white;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    animation-name: appearOnEntry;
+    animation-duration: 4s;
+}
+
+/* animace zobrazeni jmena */
+@keyframes appearOnEntry {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+header p {
+    animation: appearFromBottom 3s forwards;
+    opacity: 0;
+    animation-delay: 2s;
+}
+
+#arrow {
+    font-size: 30px;
+    display: block;
+    animation: appearFromBottom 3s forwards;
+    opacity: 0;
+    animation-delay: 2.5s;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+/* animace zobrazeni textu pod jmenem */
+@keyframes appearFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+/* globalni navigace */
+.navbar-bg {
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    height: 60px;
+    z-index: 999;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    height: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.navbar a, .mobile_navbar a {
+    color: white;
+    text-align: center;
+    padding: 0px 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Colfax', Helvetica, sans-serif;
+    letter-spacing: .08em;
+    font-weight: 600;
+}
+
+.navbar p {
+    width: 100%;
+    height: 30px;
+    margin: 15px auto;
+    line-height: 30px;
+}
+
+.navbar a:hover p {
+    background: #252c32;
+    border-radius: 5px;
+    position: relative;
+}
+
+.navbar a:hover p::after {
+    content: "";
+    background-color: rgb(0, 200, 200);
+    border-radius: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 4px;
+    width: 100%;
+}
+
+/* -------------------------------------------------- */
+
+/* trida vsech sekci */
+.baseSection {
+    margin: auto;
+    width: 80%;
+    height: 100vh;
+    padding: 100px 0 0 0;
+    min-height: 1200px;
+    border-bottom: #252c32 2px solid;
+}
+
+.baseSection h2 {
+    text-align: center;
+    font-family: 'Colfax', Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+/* ------------------------------------------------ */
+
+/* podsekce jednotlivych skol */
+.schools {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 60px;
+}
+
+/* animace prijeti ze spodu */
+@keyframes slideTopToBottom {
+    0% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animationT {
+    animation: slideTopToBottom 3s;
+}
+
+/* animace prijeti ze shora */
+@keyframes slideBottomToTop {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animationB {
+    animation: slideBottomToTop 3s;
+}
+
+.schools h2 {
+    font-size: 30px;
+}
+
+.schools div {
+    opacity: 0.5;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.schools div:hover {
+    opacity: 1 !important;
+    color:rgb(0, 200, 200);
+    transition: 0.5s;
+    transform: scale(1.02);
+}
+
+img[alt="slovacka"]{
+    width: 450px;
+    display: block;
+    margin: auto;
+}
+
+img[alt="gympl"]{
+    width: 450px;
+    display: block;
+    margin: auto;
+}
+
+img[alt="vut"]{
+    width: 450px;
+    display: block;
+    margin: auto;
+}
+
+/* ------------------------------------------- */
+
+/* sekce schopnosti */
+#skills img {
+    width: 100px;
+    height: 100px;
+    opacity: 0.5;
+}
+
+#skills img:hover {
+    opacity: 1;
+    transition: .5s;
+}
+
+.devicon-latex-original, .devicon-unity-original {
+    font-size: 100px;
+    opacity: 0.5;
+}
+
+.devicon-latex-original:hover, .devicon-unity-original:hover {
+    opacity: 1;
+    transition: .5s;
+}
+/* ---------------------------------------------------------*/
+
+/* sekce kontaktu */
+#links {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    height: 100%;
+    justify-content: center;
+}
+
+#links a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Colfax', Helvetica, sans-serif;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+#links a:hover {
+    color: rgb(0, 200, 200);
+    transition: .5s;
+}
+
+#links i {
+    font-size: 30px
+}
+
+#links img[alt="FIT"] {
+    width: 30px;
+}
+
+#links span {
+    margin-top: 50px;
+}
+
+
+/* ------------------------------------------------- */
+
+/* zápatí */
+footer {
+    width: 100%;
+    background-color: black;
+}
+
+footer p {
+    margin: 0;
+    text-align: right;
+    padding-right: 10px;
+}
+
+/* --------------------------- */
+
+/* veci potrebne pro budouci prepnuti sirky na mobilni telefon */
+#hamburger {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.bar {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.mobile_navbar {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    height: 200px;
+    width: 100%;
+    background-color: black;
+}
+
+.open .mobile_navbar {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+/* ------------------------------------------------------- */
+
+/* flex tabulka programovacích jazyků */
+#test {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#test p {
+    font-size: 25px;
+}
+
+#test > div:not(:nth-child(1)) {
+    border-left: 2px solid white;
+}
+
+#test div {
+    position: relative;
+}
+
+#line {
+    width: 200px;
+}
+
+/*#test #line::after {
+    content: "";
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    height: 2px;
+    width: 1400px;
+}*/
+
+#test p {
+    border-bottom: 2px solid white;
+}
+
+.tablediv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----------------------------------------------------- */
+
+/* media query pro mobilni telefon (nebyl jsem si jisty s presnou sirkou, ale internet rikal ze 480px tak to tak mam) */
+@media screen and (max-width: 480px){
+
+    /* zmena navbaru na "hamburger" navbar */
+    .navbar {
+        display: none;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    header::before {
+        background: none;
+    }
+    /* ------------------------------------ */
+
+    /* zmeny dokumentu pro mensi obrazovku (velikost pisma, mezery mezi pismeny, sirka headeru) */
+    header {
+        width: 100%;
+    }
+
+    p {
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 1.2em;
+        text-align: center;
+    }
+
+    /* zmena podsekce skoly, aby byla prehlednejsi na mobilu (odstraneni animace a hover funkce, zarovnano do sloupce) */
+    .schools {
+        flex-direction: column;
+        gap: 0px;
+        justify-content: center;
+    }
+
+    .animationB, .animationT {
+        animation: none !important;
+    }
+
+    .schools img {
+        width: 350px;
+    }
+
+    .schools div {
+        opacity: 1;
+    }
+
+    .schools div:hover {
+        color: inherit;
+        transition: none;
+        transform: none;
+    }
+
+    #education {
+        height: 1700px;
+    }
+
+    /* --------------------------------------------------- */
+
+    /* zmena sekce s tabulkou, aby se tabulka vlezla na obrazovku */
+    #skills {
+        height: 1200px;
+    }
+
+    #test {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    #test p {
+        border-bottom: 1px solid white;
+    }
+
+    #test > div:not(:nth-child(1)) {
+        border-left: none;
+    }
+
+    #test #line::after {
+        display: none;
+    }
+
+    #lastcell {
+        flex-direction: column;
+    }
+    /* ------------------------------------------------------------- */
+    /* konec media query */
+}
